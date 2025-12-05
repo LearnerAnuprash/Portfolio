@@ -6,7 +6,7 @@ const HeroSection = () => {
         loop
         muted
         playsInline
-        className="w-full h-screen  object-cover opacity-50 rounded-3xl z-0"
+        className="w-full h-screen  object-cover opacity-60 z-0"
         src="../public/videos/nav-video.mp4"
       />
     </div>
