@@ -1,5 +1,16 @@
 const HeroSection = () => {
-  return <div className="text-white text-[100]">Anuprash Subedi</div>;
+  return (
+    <div className="absolute inset-0 z-0 ">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="w-full h-screen  object-cover opacity-50 rounded-3xl z-0"
+        src="../public/videos/nav-video.mp4"
+      />
+    </div>
+  );
 };
 
 export default HeroSection;
