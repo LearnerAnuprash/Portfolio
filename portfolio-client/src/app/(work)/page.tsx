@@ -1,3 +1,11 @@
+import { HeroSection } from "./_components/HeroSection";
+import { MyWorksSection } from "./_components/MyWorksSection";
+
 export default function WorkPage() {
-  return <h1>WorkPage</h1>;
+  return (
+    <div>
+      <HeroSection />
+      <MyWorksSection />
+    </div>
+  );
 }

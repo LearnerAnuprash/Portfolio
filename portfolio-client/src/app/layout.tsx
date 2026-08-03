@@ -1,4 +1,5 @@
-import { Navbar } from "./_shared/components/Navbar";
+import { Footer } from "@/shared/components/Footer";
+import { Navbar } from "../shared/components/Navbar";
 import "./globals.css";
 export default function RootLayout({
   children,
@@ -19,9 +20,10 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-full flex flex-col m-5 font-display">
+      <body className="min-h-full flex flex-col mt-5 font-display bg-gradient">
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
