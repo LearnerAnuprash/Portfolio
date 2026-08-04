@@ -49,6 +49,9 @@ export function Navbar() {
                 )}
               >
                 {label}
+                {route === "/free-tools" && (
+                  <span className="fire-icon">🔥</span>
+                )}
                 {route === "/" && (
                   <div className="flex items-center justify-center size-5 rounded-sm border-2 border-gray-400">
                     <span

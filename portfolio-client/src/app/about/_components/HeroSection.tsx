@@ -29,10 +29,10 @@ export function HeroSection() {
         </div>
 
         <div className="flex-1">
-          <h1 className="font-semibold text-6xl text-slate-900 leading-tight mb-4">
+          <h1 className="font-semibold text-7xl text-slate-900 leading-tight mb-4">
             About Me
           </h1>
-          <p className="text-lg text-gray-600 leading-relaxed">
+          <p className="text-xl text-gray-600 leading-relaxed">
             Frontend Developer building scalable systems. I build interactive
             interfaces with reusable components, predictable state management,
             and performance-first patterns that keep applications smooth as they

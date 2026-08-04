@@ -66,9 +66,9 @@ export function ExperienceSection() {
   return (
     <section className="w-full max-w-5xl mx-auto px-6 py-16">
       <div className="mb-10">
-        <h3 className="text-3xl font-semibold text-slate-800">Experience</h3>
+        <h3 className="text-4xl font-semibold text-slate-800">Experience</h3>
         <div className="mt-2 flex items-center gap-3">
-          <p className="text-lg font-medium text-slate-700">
+          <p className="text-xl font-medium text-slate-700">
             Varosa Technology
           </p>
           <span className="h-1 w-1 rounded-full bg-slate-400" />
@@ -78,14 +78,14 @@ export function ExperienceSection() {
         </div>
 
         <div className="mt-6">
-          <p className="text-sm font-medium text-slate-600 uppercase tracking-wide mb-3">
+          <p className="text-base font-medium text-slate-600 uppercase tracking-wide mb-3">
             Tech I work with
           </p>
           <div className="flex flex-wrap gap-2">
             {SKILLS.map((skill) => (
               <span
                 key={skill}
-                className="text-xs font-medium text-teal-900 bg-teal-900/5 rounded-md px-3 py-1.5 border border-slate-300"
+                className="text-sm font-medium text-teal-900 bg-teal-900/5 rounded-md px-3 py-1.5 border border-slate-300"
               >
                 {skill}
               </span>
@@ -93,14 +93,14 @@ export function ExperienceSection() {
           </div>
         </div>
 
-        <ul className="mt-6 space-y-2 text-sm text-gray-600 list-disc list-inside marker:text-teal-900/60">
+        <ul className="mt-6 space-y-2 text-base text-gray-600 list-disc list-inside marker:text-teal-900/60">
           {HIGHLIGHTS.map((point) => (
             <li key={point}>{point}</li>
           ))}
         </ul>
       </div>
 
-      <h4 className="text-xl font-semibold text-slate-800 mb-5">
+      <h4 className="text-2xl font-semibold text-slate-800 mb-5">
         Projects at Varosa
       </h4>
 
@@ -125,15 +125,15 @@ export function ExperienceSection() {
 
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2">
-                  <h5 className="text-lg font-semibold text-slate-900">
+                  <h5 className="text-xl font-semibold text-slate-900">
                     {project.name}
                   </h5>
                   <ArrowUpRight className="size-4 text-gray-400 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </div>
-                <p className="text-sm text-gray-500 mt-0.5">
+                <p className="text-base text-gray-500 mt-0.5">
                   {project.description}
                 </p>
-                <p className="text-sm text-gray-600 mt-1">
+                <p className="text-base text-gray-600 mt-1">
                   {project.contribution}
                 </p>
               </div>

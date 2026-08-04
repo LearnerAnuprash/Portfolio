@@ -22,7 +22,7 @@ const PRINCIPLES = [
 export function PhilosophySection() {
   return (
     <section className="w-full max-w-5xl mx-auto px-6 py-16">
-      <h3 className="text-3xl font-semibold text-slate-800 mb-8">
+      <h3 className="text-4xl font-semibold text-slate-800 mb-8">
         How I Approach Engineering
       </h3>
 
@@ -32,10 +32,10 @@ export function PhilosophySection() {
             key={item.label}
             className="rounded-xl border border-slate-300 bg-white/60 backdrop-blur-sm p-5"
           >
-            <span className="text-sm font-semibold text-teal-900 uppercase tracking-wide">
+            <span className="text-base font-semibold text-teal-900 uppercase tracking-wide">
               {item.label}
             </span>
-            <p className="text-sm text-gray-600 mt-2 leading-relaxed">
+            <p className="text-base text-gray-600 mt-2 leading-relaxed">
               {item.text}
             </p>
           </div>

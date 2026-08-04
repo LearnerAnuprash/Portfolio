@@ -25,7 +25,7 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-slate-900 py-4">
+    <footer className="w-full bg-slate-900 py-4 mt-auto">
       <div className="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="text-sm text-slate-300">
           &copy; {year} Anuprash Subedi. All rights reserved.
