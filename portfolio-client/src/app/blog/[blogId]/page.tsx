@@ -24,6 +24,10 @@ const BLOG_DATA: Record<
   },
 };
 
+export function generateStaticParams() {
+  return Object.keys(BLOG_DATA).map((blogId) => ({ blogId }));
+}
+
 export async function generateMetadata({
   params,
 }: {

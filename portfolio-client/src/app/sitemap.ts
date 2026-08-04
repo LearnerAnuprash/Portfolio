@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/shared/constants/seo";
 
+export const dynamic = "force-static";
+
 const routes = [
   "/",
   "/about",
