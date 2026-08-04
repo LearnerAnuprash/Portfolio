@@ -1,4 +1,19 @@
+import type { Metadata } from "next";
 import { BlogCard } from "./_components/BlogCard";
+import { createPageMetadata } from "@/shared/constants/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Blog",
+  description:
+    "Frontend engineering notes, React patterns, and practical write-ups from Anuprash Subedi.",
+  pathname: "/blog",
+  keywords: [
+    "frontend blog",
+    "React blog",
+    "TypeScript blog",
+    "engineering notes",
+  ],
+});
 
 const BLOGS = [
   {

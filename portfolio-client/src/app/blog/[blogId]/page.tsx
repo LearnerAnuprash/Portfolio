@@ -1,11 +1,14 @@
+import type { Metadata } from "next";
 import { BlogHeader } from "../_components/BlogHeader";
 import { BlogAuthor } from "../_components/BlogAuthor";
 import { CodeBlock } from "../_components/CodeBlock";
+import { createPageMetadata } from "@/shared/constants/seo";
 
 const BLOG_DATA: Record<
   string,
   {
     title: string;
+    description: string;
     date: string;
     readTime: string;
     tags: string[];
@@ -13,11 +16,39 @@ const BLOG_DATA: Record<
 > = {
   "react-hooks-deep-dive": {
     title: "React Hooks: A Deep Dive Into the Essentials",
+    description:
+      "A practical guide to useState, useEffect, useRef, useMemo, useCallback, and useReducer with common mistakes and real-world patterns.",
     date: "Aug 3, 2026",
     readTime: "8 min read",
     tags: ["React", "TypeScript", "Frontend"],
   },
 };
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ blogId: string }>;
+}): Promise<Metadata> {
+  const { blogId } = await params;
+  const blog = BLOG_DATA[blogId];
+
+  if (!blog) {
+    return createPageMetadata({
+      title: "Blog not found",
+      description: "The requested blog post could not be found.",
+      pathname: `/blog/${blogId}`,
+      keywords: ["blog not found"],
+    });
+  }
+
+  return createPageMetadata({
+    title: blog.title,
+    description: blog.description,
+    pathname: `/blog/${blogId}`,
+    keywords: blog.tags,
+    type: "article",
+  });
+}
 
 export default async function BlogDetail({
   params,

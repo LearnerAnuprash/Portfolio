@@ -1,6 +1,31 @@
 import { Footer } from "@/shared/components/Footer";
 import { Navbar } from "../shared/components/Navbar";
+import type { Metadata } from "next";
+import {
+  SITE_DESCRIPTION,
+  SITE_TITLE,
+  metadataBase,
+} from "@/shared/constants/seo";
 import "./globals.css";
+
+export const metadata: Metadata = {
+  metadataBase,
+  title: {
+    default: SITE_TITLE,
+    template: "%s | Anuprash Subedi",
+  },
+  description: SITE_DESCRIPTION,
+  applicationName: "Anuprash Subedi Portfolio",
+  authors: [{ name: "Anuprash Subedi" }],
+  creator: "Anuprash Subedi",
+  publisher: "Anuprash Subedi",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{

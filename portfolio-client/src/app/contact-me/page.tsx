@@ -1,4 +1,18 @@
+import type { Metadata } from "next";
 import { ArrowUpRight, Mail, MessageCircle, PhoneCall } from "lucide-react";
+import { createPageMetadata } from "@/shared/constants/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Contact Me",
+  description:
+    "Contact Anuprash Subedi by email or WhatsApp to discuss frontend projects, collaborations, proposals, or general questions.",
+  pathname: "/contact-me",
+  keywords: [
+    "contact frontend developer",
+    "email portfolio",
+    "WhatsApp contact",
+  ],
+});
 
 const EMAIL = "info.anuprash@gmail.com";
 const WHATSAPP_NUMBER = "+977 9745867377";

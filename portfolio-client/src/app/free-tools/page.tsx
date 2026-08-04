@@ -1,5 +1,15 @@
+import type { Metadata } from "next";
 import { QuickNotes } from "./_components/QuickNotes";
 import { Whiteboard } from "./_components/Whiteboard";
+import { createPageMetadata } from "@/shared/constants/seo";
+
+export const metadata: Metadata = createPageMetadata({
+  title: "Free Tools",
+  description:
+    "Local-first browser tools including Quick Notes and a Whiteboard, built for fast everyday use without sign-in or installs.",
+  pathname: "/free-tools",
+  keywords: ["free tools", "notes app", "whiteboard", "browser tools"],
+});
 
 export default function FreeToolsPage() {
   return (
