@@ -67,13 +67,13 @@ export function QuickNotes() {
   };
 
   return (
-    <div className="rounded-2xl border border-slate-300 min-h-120 bg-white/60 backdrop-blur-sm p-4 sm:p-6 transition-shadow hover:shadow-lg flex flex-col">
-      <div className="flex flex-wrap items-start justify-between gap-2 mb-4">
+    <div className="flex min-h-120 flex-col rounded-2xl border border-slate-300 bg-white/60 p-3 backdrop-blur-sm transition-shadow hover:shadow-lg sm:p-6">
+      <div className="mb-4 flex flex-wrap items-start justify-between gap-2">
         <div>
-          <h3 className="text-lg sm:text-xl font-semibold text-slate-900">
+          <h3 className="text-base font-semibold text-slate-900 sm:text-xl">
             Quick Notes
           </h3>
-          <p className="text-xs sm:text-sm text-gray-500 mt-1">
+          <p className="mt-1 text-[11px] text-gray-500 sm:text-sm">
             A quiet corner for quick thoughts. Nothing leaves this tab.
           </p>
         </div>
@@ -119,25 +119,25 @@ export function QuickNotes() {
         onChange={(e) => setContent(e.target.value)}
         placeholder="Write anything. It saves itself as you type."
         maxLength={MAX_CHARS}
-        className="w-full flex-1 h-52 sm:h-64 p-4 text-base text-gray-700 bg-slate-50 border border-slate-200 rounded-xl resize-none focus:outline-none focus:ring-2 focus:ring-slate-900/10 focus:border-slate-300 placeholder:text-gray-400"
+        className="h-44 w-full flex-1 resize-none rounded-xl border border-slate-200 bg-slate-50 p-3 text-sm text-gray-700 placeholder:text-gray-400 focus:border-slate-300 focus:outline-none focus:ring-2 focus:ring-slate-900/10 sm:h-64 sm:p-4 sm:text-base"
       />
 
-      <div className="flex flex-wrap items-center justify-between gap-2 mt-3">
-        <p className="text-xs text-gray-400">
+      <div className="mt-3 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+        <p className="text-[11px] text-gray-400 sm:text-xs">
           {words} {words === 1 ? "word" : "words"} ·{" "}
           {content.length.toLocaleString()} characters
         </p>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 self-end sm:self-auto">
           <button
             onClick={copyToClipboard}
             disabled={!content}
-            className="text-xs text-gray-500 hover:text-slate-900 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+            className="text-[11px] text-gray-500 transition-colors hover:text-slate-900 disabled:cursor-not-allowed disabled:opacity-40 sm:text-xs"
           >
             {copied ? "Copied!" : "Copy"}
           </button>
           <button
             onClick={() => setContent("")}
-            className="text-xs text-gray-500 hover:text-red-600 transition-colors"
+            className="text-[11px] text-gray-500 transition-colors hover:text-red-600 sm:text-xs"
           >
             Clear all
           </button>

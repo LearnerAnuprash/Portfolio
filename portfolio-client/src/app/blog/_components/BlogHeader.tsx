@@ -19,22 +19,22 @@ export function BlogHeader({
   coverImage,
 }: BlogHeaderProps) {
   return (
-    <header className="w-full max-w-3xl mx-auto px-6 pt-28 pb-10">
-      <div className="flex items-center gap-3 text-sm text-gray-500 mb-4">
+    <header className="w-full max-w-3xl mx-auto px-4 pt-24 pb-8 sm:px-6 sm:pt-28 sm:pb-10">
+      <div className="mb-4 flex items-center gap-2 text-xs text-gray-500 sm:gap-3 sm:text-sm">
         <span>{date}</span>
         <span className="h-1 w-1 rounded-full bg-gray-400" />
         <span>{readTime}</span>
       </div>
 
-      <h1 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight mb-5">
+      <h1 className="mb-4 text-3xl font-bold leading-tight text-slate-900 sm:text-4xl md:text-5xl">
         {title}
       </h1>
 
-      <div className="flex flex-wrap gap-2 mb-8">
+      <div className="mb-7 flex flex-wrap gap-2 sm:mb-8">
         {tags.map((tag) => (
           <span
             key={tag}
-            className="text-xs font-medium text-teal-900 bg-teal-900/5 rounded-full px-3 py-1 border border-slate-200"
+            className="rounded-full border border-slate-200 bg-teal-900/5 px-2.5 py-1 text-[11px] font-medium text-teal-900 sm:px-3 sm:text-xs"
           >
             {tag}
           </span>

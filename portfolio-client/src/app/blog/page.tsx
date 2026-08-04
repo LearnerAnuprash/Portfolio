@@ -14,16 +14,23 @@ const BLOGS = [
 
 export default function BlogPage() {
   return (
-    <section className="w-full max-w-5xl mx-auto px-6 pt-30 pb-20">
-      <div className="mb-12">
-        <h1 className="text-5xl font-semibold text-slate-900 mb-3">Blog</h1>
-        <p className="text-lg text-gray-500">
-          Thoughts on frontend engineering, React patterns, and building things
-          that work.
+    <section className="w-full max-w-5xl mx-auto px-4 pt-24 pb-16 sm:px-6 sm:pt-30 sm:pb-20">
+      <div className="mb-10 sm:mb-12">
+        <h1 className="mb-3 text-3xl font-semibold text-slate-900 sm:text-5xl">
+          Blog
+        </h1>
+        <p className="text-base text-gray-500 sm:text-lg">
+          <span className="sm:hidden">
+            Notes on React, frontend craft, and practical patterns.
+          </span>
+          <span className="hidden sm:inline">
+            Thoughts on frontend engineering, React patterns, and building
+            things that work.
+          </span>
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-2 sm:gap-6">
         {BLOGS.map((blog) => (
           <BlogCard key={blog.id} {...blog} />
         ))}

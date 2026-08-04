@@ -27,7 +27,7 @@ export function BlogCard({
   return (
     <Link
       href={`/blog/${id}`}
-      className="group block rounded-2xl border border-slate-400 bg-white/60 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:shadow-lg hover:border-slate-800"
+      className="group block overflow-hidden rounded-2xl border border-slate-400 bg-white/60 backdrop-blur-sm transition-all duration-300 hover:border-slate-800 hover:shadow-lg"
     >
       {image && (
         <div className="relative w-full aspect-[16/9] bg-slate-100 overflow-hidden">
@@ -40,33 +40,33 @@ export function BlogCard({
         </div>
       )}
 
-      <div className="p-6">
-        <div className="flex items-center gap-3 text-xs text-gray-500 mb-3">
+      <div className="p-4 sm:p-6">
+        <div className="mb-3 flex items-center gap-2 text-[11px] text-gray-500 sm:gap-3 sm:text-xs">
           <span>{date}</span>
           <span className="h-1 w-1 rounded-full bg-gray-400" />
           <span>{readTime}</span>
         </div>
 
-        <h3 className="text-xl font-semibold text-slate-900 mb-2 group-hover:text-teal-900 transition-colors">
+        <h3 className="mb-2 text-lg font-semibold text-slate-900 transition-colors group-hover:text-teal-900 sm:text-xl">
           {title}
         </h3>
 
-        <p className="text-sm text-gray-600 leading-relaxed mb-4 line-clamp-2">
+        <p className="mb-4 line-clamp-1 text-sm leading-relaxed text-gray-600 sm:line-clamp-2">
           {excerpt}
         </p>
 
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-wrap gap-2">
             {tags.map((tag) => (
               <span
                 key={tag}
-                className="text-xs font-medium text-slate-600 bg-slate-100 rounded-full px-2.5 py-1"
+                className="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-medium text-slate-600 sm:text-xs"
               >
                 {tag}
               </span>
             ))}
           </div>
-          <ArrowUpRight className="size-4 text-gray-400 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          <ArrowUpRight className="size-4 self-end text-gray-400 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 sm:self-auto" />
         </div>
       </div>
     </Link>

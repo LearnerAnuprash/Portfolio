@@ -33,8 +33,8 @@ const IMAGES: GalleryImage[] = [
 
 export function ImageGallery() {
   return (
-    <section className="w-full max-w-5xl mx-auto px-6 py-20">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 auto-rows-[200px]">
+    <section className="w-full max-w-5xl mx-auto px-4 py-14 sm:px-6 sm:py-20">
+      <div className="grid grid-cols-1 gap-4 auto-rows-[160px] sm:gap-5 md:grid-cols-3 md:auto-rows-[200px]">
         {IMAGES.map((image) => (
           <div
             key={image.alt}
@@ -47,11 +47,11 @@ export function ImageGallery() {
               className="object-scale-down transition-all duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="absolute bottom-0 left-0 right-0 p-5 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-              <span className="text-white text-sm font-semibold tracking-wide uppercase">
+            <div className="absolute bottom-0 left-0 right-0 translate-y-4 p-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100 sm:p-5">
+              <span className="text-sm font-semibold uppercase tracking-wide text-white">
                 {image.caption}
               </span>
-              <div className="w-8 h-0.5 bg-teal-400 mt-2 rounded-full group-hover:w-14 transition-all duration-500" />
+              <div className="mt-2 h-0.5 w-8 rounded-full bg-teal-400 transition-all duration-500 group-hover:w-14" />
             </div>
           </div>
         ))}

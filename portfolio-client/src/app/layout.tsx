@@ -20,9 +20,9 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-full flex flex-col mt-5 font-display bg-gradient">
+      <body className="min-h-screen flex flex-col pt-5 font-display bg-gradient">
         <Navbar />
-        {children}
+        <main className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>

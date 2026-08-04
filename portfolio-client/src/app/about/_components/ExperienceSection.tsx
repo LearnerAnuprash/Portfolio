@@ -64,11 +64,13 @@ const PROJECTS: Project[] = [
 
 export function ExperienceSection() {
   return (
-    <section className="w-full max-w-5xl mx-auto px-6 py-16">
-      <div className="mb-10">
-        <h3 className="text-4xl font-semibold text-slate-800">Experience</h3>
-        <div className="mt-2 flex items-center gap-3">
-          <p className="text-xl font-medium text-slate-700">
+    <section className="w-full max-w-5xl mx-auto px-4 py-12 sm:px-6 sm:py-16">
+      <div className="mb-8 sm:mb-10">
+        <h3 className="text-2xl font-semibold text-slate-800 sm:text-4xl">
+          Experience
+        </h3>
+        <div className="mt-2 flex flex-wrap items-center gap-2 sm:gap-3">
+          <p className="text-lg font-medium text-slate-700 sm:text-xl">
             Varosa Technology
           </p>
           <span className="h-1 w-1 rounded-full bg-slate-400" />
@@ -78,14 +80,14 @@ export function ExperienceSection() {
         </div>
 
         <div className="mt-6">
-          <p className="text-base font-medium text-slate-600 uppercase tracking-wide mb-3">
+          <p className="mb-3 text-sm font-medium uppercase tracking-wide text-slate-600 sm:text-base">
             Tech I work with
           </p>
           <div className="flex flex-wrap gap-2">
             {SKILLS.map((skill) => (
               <span
                 key={skill}
-                className="text-sm font-medium text-teal-900 bg-teal-900/5 rounded-md px-3 py-1.5 border border-slate-300"
+                className="rounded-md border border-slate-300 bg-teal-900/5 px-2.5 py-1 text-xs font-medium text-teal-900 sm:px-3 sm:py-1.5 sm:text-sm"
               >
                 {skill}
               </span>
@@ -93,14 +95,14 @@ export function ExperienceSection() {
           </div>
         </div>
 
-        <ul className="mt-6 space-y-2 text-base text-gray-600 list-disc list-inside marker:text-teal-900/60">
+        <ul className="mt-5 space-y-2 text-sm text-gray-600 list-disc list-inside marker:text-teal-900/60 sm:mt-6 sm:text-base">
           {HIGHLIGHTS.map((point) => (
             <li key={point}>{point}</li>
           ))}
         </ul>
       </div>
 
-      <h4 className="text-2xl font-semibold text-slate-800 mb-5">
+      <h4 className="mb-4 text-xl font-semibold text-slate-800 sm:mb-5 sm:text-2xl">
         Projects at Varosa
       </h4>
 
@@ -112,9 +114,9 @@ export function ExperienceSection() {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-5 px-8 py-5 transition-colors hover:bg-slate-50 group"
+              className="group flex items-start gap-4 px-4 py-4 transition-colors hover:bg-slate-50 sm:items-center sm:gap-5 sm:px-8 sm:py-5"
             >
-              <div className="relative w-10 h-10 shrink-0 rounded-lg overflow-hidden bg-slate-100 border border-slate-200">
+              <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-lg border border-slate-200 bg-slate-100 sm:h-10 sm:w-10">
                 <Image
                   src={project.logo}
                   alt={`${project.name} logo`}
@@ -124,17 +126,29 @@ export function ExperienceSection() {
               </div>
 
               <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-2">
-                  <h5 className="text-xl font-semibold text-slate-900">
+                <div className="flex items-start gap-2 sm:items-center">
+                  <h5 className="text-lg font-semibold text-slate-900 sm:text-xl">
                     {project.name}
                   </h5>
-                  <ArrowUpRight className="size-4 text-gray-400 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  <ArrowUpRight className="size-4 text-gray-400 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                 </div>
-                <p className="text-base text-gray-500 mt-0.5">
-                  {project.description}
+                <p className="mt-0.5 text-sm text-gray-500 sm:text-base">
+                  <span className="sm:hidden">{project.description}</span>
+                  <span className="hidden sm:inline">
+                    {project.description}
+                  </span>
                 </p>
-                <p className="text-base text-gray-600 mt-1">
-                  {project.contribution}
+                <p className="mt-1 text-sm text-gray-600 sm:text-base">
+                  <span className="sm:hidden">
+                    {project.name === "Calilio"
+                      ? "Real-time call dashboard, auth, and dialer UI."
+                      : project.name === "LeadHeed"
+                        ? "Pipeline, role-based auth, and lead capture flows."
+                        : "AI matching, scheduling, and payment-related work."}
+                  </span>
+                  <span className="hidden sm:inline">
+                    {project.contribution}
+                  </span>
                 </p>
               </div>
             </Link>

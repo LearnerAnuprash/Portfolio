@@ -60,7 +60,9 @@ const MY_WORKS: myWorksType[] = [
 export function MyWorksSection() {
   return (
     <section className="w-full max-w-5xl mx-auto px-6 py-20">
-      <h3 className="text-5xl font-semibold text-slate-800 mb-10">My Works</h3>
+      <h3 className="mb-8 text-3xl font-semibold text-slate-800 sm:mb-10 sm:text-4xl lg:text-5xl">
+        My Works
+      </h3>
 
       <div className="flex flex-col gap-8">
         {MY_WORKS.map((work) => (
@@ -69,11 +71,9 @@ export function MyWorksSection() {
             href={work.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col sm:flex-row rounded-xl border border-slate-500 bg-white overflow-hidden
-           transition-all duration-300 hover:shadow-lg hover:scale-[1.01]
-           hover:ring-1 hover:ring-slate-800 group"
+            className="group flex flex-col overflow-hidden rounded-xl border border-slate-500 bg-white transition-all duration-300 hover:shadow-lg hover:scale-[1.01] hover:ring-1 hover:ring-slate-800 sm:flex-row"
           >
-            <div className="relative w-full sm:w-72 aspect-[4/3] sm:aspect-auto shrink-0 bg-slate-100 overflow-hidden border-b sm:border-b-0 sm:border-r border-slate-500">
+            <div className="relative aspect-[16/10] w-full shrink-0 overflow-hidden border-b border-slate-500 bg-slate-100 sm:aspect-auto sm:w-72 sm:border-b-0 sm:border-r">
               <Image
                 src={work.src}
                 alt={work.title}
@@ -82,29 +82,29 @@ export function MyWorksSection() {
               />
             </div>
 
-            <div className="flex flex-col gap-3 flex-1 py-3">
-              <div className="flex items-center justify-between gap-3 px-6">
-                <h3 className="text-xl font-semibold text-slate-900">
+            <div className="flex flex-1 flex-col gap-3 py-4 sm:py-3">
+              <div className="flex items-start justify-between gap-3 px-4 sm:items-center sm:px-6">
+                <h3 className="text-lg font-semibold text-slate-900 sm:text-xl">
                   {work.title}
                 </h3>
-                <ArrowUpRight className="size-5 shrink-0 text-slate-400 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-teal-900" />
+                <ArrowUpRight className="size-4 shrink-0 text-slate-400 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-teal-900 sm:size-5" />
               </div>
 
-              <p className="text-sm leading-relaxed text-gray-700 px-6">
+              <p className="px-4 text-sm leading-relaxed text-gray-700 sm:px-6 sm:text-[15px]">
                 {work.description}
               </p>
 
-              <ul className="flex flex-col gap-1.5 text-sm text-gray-700 list-disc list-inside marker:text-teal-900/60 px-6">
+              <ul className="hidden flex-col gap-1.5 px-4 text-sm text-gray-700 list-disc list-inside marker:text-teal-900/60 sm:flex sm:px-6">
                 {work.highlights?.map((point) => (
                   <li key={point}>{point}</li>
                 ))}
               </ul>
 
-              <div className="flex flex-wrap gap-2 mt-auto border-t border-slate-500 px-6">
+              <div className="mt-auto flex flex-wrap gap-2 border-t border-slate-500 px-4 pt-3 sm:px-6">
                 {work.tech.map((tech) => (
                   <span
                     key={tech}
-                    className="text-xs font-medium text-teal-900 bg-teal-900/5 rounded-md px-3 py-1 mt-3 border border-slate-400"
+                    className="rounded-md border border-slate-400 bg-teal-900/5 px-2.5 py-1 text-[11px] font-medium text-teal-900 sm:px-3 sm:text-xs"
                   >
                     {tech}
                   </span>

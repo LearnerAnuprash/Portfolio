@@ -29,11 +29,11 @@ export default async function BlogDetail({
 
   if (!blog) {
     return (
-      <div className="w-full max-w-3xl mx-auto px-6 pt-30 pb-20 text-center">
-        <h1 className="text-3xl font-semibold text-slate-900">
+      <div className="w-full max-w-3xl mx-auto px-4 pt-24 pb-16 text-center sm:px-6 sm:pt-30 sm:pb-20">
+        <h1 className="text-2xl font-semibold text-slate-900 sm:text-3xl">
           Blog not found
         </h1>
-        <p className="text-gray-500 mt-2">
+        <p className="mt-2 text-sm text-gray-500 sm:text-base">
           The blog you&apos;re looking for doesn&apos;t exist.
         </p>
       </div>
@@ -49,7 +49,7 @@ export default async function BlogDetail({
         tags={blog.tags}
       />
 
-      <div className="w-full max-w-3xl mx-auto px-6 prose prose-slate prose-lg prose-headings:font-semibold prose-headings:text-slate-900 prose-p:text-gray-700 prose-p:leading-relaxed prose-li:text-gray-700 prose-code:text-teal-900 prose-code:bg-teal-900/5 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-normal">
+      <div className="w-full max-w-3xl mx-auto px-4 prose prose-slate prose-base sm:px-6 sm:prose-lg prose-headings:font-semibold prose-headings:text-slate-900 prose-p:text-gray-700 prose-p:leading-relaxed prose-li:text-gray-700 prose-code:text-teal-900 prose-code:bg-teal-900/5 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-normal">
         <p>
           React hooks changed how we write components. No more class components,
           no more <code>this</code> binding, no more lifecycle methods scattered

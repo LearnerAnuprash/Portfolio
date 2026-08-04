@@ -117,19 +117,19 @@ export function Whiteboard() {
   }, []);
 
   return (
-    <div className="rounded-2xl border border-slate-300 bg-white/60 backdrop-blur-sm p-4 sm:p-6 transition-shadow hover:shadow-lg">
-      <div className="flex flex-wrap items-start justify-between gap-2 mb-4">
+    <div className="rounded-2xl border border-slate-300 bg-white/60 p-3 backdrop-blur-sm transition-shadow hover:shadow-lg sm:p-6">
+      <div className="mb-4 flex flex-wrap items-start justify-between gap-2">
         <div>
-          <h3 className="text-lg sm:text-xl font-semibold text-slate-900">
+          <h3 className="text-base font-semibold text-slate-900 sm:text-xl">
             Whiteboard
           </h3>
-          <p className="text-xs sm:text-sm text-gray-500 mt-1">
+          <p className="mt-1 text-[11px] text-gray-500 sm:text-sm">
             A scratchpad for doodles, diagrams and rough ideas.
           </p>
         </div>
-        <div className="size-10 rounded-lg bg-purple-50 flex items-center justify-center shrink-0">
+        <div className="flex size-9 shrink-0 items-center justify-center rounded-lg bg-purple-50 sm:size-10">
           <svg
-            className="w-5 h-5 text-purple-600"
+            className="h-4 w-4 text-purple-600 sm:h-5 sm:w-5"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -148,7 +148,7 @@ export function Whiteboard() {
         ref={canvasRef}
         width={800}
         height={400}
-        className={`w-full h-52 sm:h-64 md:h-72 border border-slate-200 rounded-xl bg-white touch-none ${
+        className={`h-44 w-full touch-none rounded-xl border border-slate-200 bg-white sm:h-64 md:h-72 ${
           erasing ? "cursor-cell" : "cursor-crosshair"
         }`}
         onPointerDown={handlePointerDown}
@@ -157,7 +157,7 @@ export function Whiteboard() {
         onPointerCancel={stopDrawing}
       />
 
-      <div className="flex flex-wrap items-center justify-between gap-3 mt-4">
+      <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
         <div className="flex flex-wrap items-center gap-3">
           <div className="flex items-center gap-1.5">
             {COLORS.map((c) => (
@@ -168,7 +168,7 @@ export function Whiteboard() {
                   setErasing(false);
                 }}
                 aria-label="Pick color"
-                className={`size-6 rounded-full border-2 transition-transform ${
+                className={`size-5 rounded-full border-2 transition-transform sm:size-6 ${
                   color === c && !erasing
                     ? "border-slate-900 scale-110"
                     : "border-slate-200 hover:scale-110"
@@ -181,13 +181,19 @@ export function Whiteboard() {
           <button
             onClick={() => setErasing((prev) => !prev)}
             aria-label="Toggle eraser"
-            className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-[11px] font-medium transition-colors ${
+            className={`inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-[11px] font-medium transition-colors ${
               erasing
                 ? "bg-slate-900 text-white"
                 : "bg-slate-50 text-gray-500 hover:text-slate-900"
             }`}
           >
-            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg
+              className="w-3.5 h-3.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -198,7 +204,7 @@ export function Whiteboard() {
           </button>
 
           <div className="flex items-center gap-2">
-            <span className="text-xs text-gray-500">Size</span>
+            <span className="text-[11px] text-gray-500 sm:text-xs">Size</span>
             <input
               type="range"
               min={1}
@@ -215,9 +221,15 @@ export function Whiteboard() {
           <button
             onClick={undo}
             disabled={historyCount === 0}
-            className="inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-slate-900 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+            className="inline-flex items-center gap-1.5 text-[11px] text-gray-500 transition-colors hover:text-slate-900 disabled:cursor-not-allowed disabled:opacity-40 sm:text-xs"
           >
-            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg
+              className="w-3.5 h-3.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -228,9 +240,15 @@ export function Whiteboard() {
           </button>
           <button
             onClick={downloadPng}
-            className="inline-flex items-center gap-1.5 text-xs text-gray-500 hover:text-slate-900 transition-colors"
+            className="inline-flex items-center gap-1.5 text-[11px] text-gray-500 transition-colors hover:text-slate-900 sm:text-xs"
           >
-            <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <svg
+              className="w-3.5 h-3.5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -241,14 +259,14 @@ export function Whiteboard() {
           </button>
           <button
             onClick={clearCanvas}
-            className="text-xs text-gray-500 hover:text-red-600 transition-colors"
+            className="text-[11px] text-gray-500 transition-colors hover:text-red-600 sm:text-xs"
           >
             Clear
           </button>
         </div>
       </div>
 
-      <p className="text-[11px] text-gray-400 mt-3">
+      <p className="mt-3 text-[10px] text-gray-400 sm:text-[11px]">
         Drag to draw, works with mouse or finger. Undo a slip, download when it
         is a masterpiece.
       </p>

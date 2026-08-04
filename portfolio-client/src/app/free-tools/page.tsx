@@ -4,8 +4,8 @@ import { Whiteboard } from "./_components/Whiteboard";
 export default function FreeToolsPage() {
   return (
     <section className="w-full max-w-5xl mx-auto px-4 sm:px-6 pt-24 sm:pt-30 pb-16 sm:pb-20">
-      <div className="mb-10 sm:mb-12">
-        <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-teal-900/5 text-teal-900 border border-teal-900/10 mb-4">
+      <div className="mb-9 sm:mb-12">
+        <span className="mb-4 inline-flex items-center gap-1.5 rounded-full border border-teal-900/10 bg-teal-900/5 px-3 py-1 text-[11px] font-medium text-teal-900 sm:text-xs">
           <svg
             className="w-3.5 h-3.5"
             fill="none"
@@ -21,13 +21,18 @@ export default function FreeToolsPage() {
           </svg>
           Runs entirely in your browser
         </span>
-        <h1 className="text-4xl sm:text-5xl font-semibold text-slate-900 flex flex-wrap items-center gap-3">
+        <h1 className="flex flex-wrap items-center gap-2 text-3xl font-semibold text-slate-900 sm:gap-3 sm:text-5xl">
           Free Tools
-          <span className="fire-icon text-3xl sm:text-4xl">🔥</span>
+          <span className="fire-icon text-2xl sm:text-4xl">🔥</span>
         </h1>
-        <p className="text-base sm:text-lg text-gray-500 mt-3 max-w-xl">
-          Simple, useful tools for everyday moments. No sign-up, no install, no
-          waiting for the internet to cooperate.
+        <p className="mt-3 max-w-xl text-sm text-gray-500 sm:text-lg">
+          <span className="sm:hidden">
+            Simple tools that stay local and load fast.
+          </span>
+          <span className="hidden sm:inline">
+            Simple, useful tools for everyday moments. No sign-up, no install,
+            no waiting for the internet to cooperate.
+          </span>
         </p>
       </div>
 

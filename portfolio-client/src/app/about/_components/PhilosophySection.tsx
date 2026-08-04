@@ -21,21 +21,21 @@ const PRINCIPLES = [
 
 export function PhilosophySection() {
   return (
-    <section className="w-full max-w-5xl mx-auto px-6 py-16">
-      <h3 className="text-4xl font-semibold text-slate-800 mb-8">
+    <section className="w-full max-w-5xl mx-auto px-4 py-12 sm:px-6 sm:py-16">
+      <h3 className="mb-6 text-2xl font-semibold text-slate-800 sm:mb-8 sm:text-4xl">
         How I Approach Engineering
       </h3>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-4">
         {PRINCIPLES.map((item) => (
           <div
             key={item.label}
-            className="rounded-xl border border-slate-300 bg-white/60 backdrop-blur-sm p-5"
+            className="rounded-xl border border-slate-300 bg-white/60 p-4 backdrop-blur-sm sm:p-5"
           >
-            <span className="text-base font-semibold text-teal-900 uppercase tracking-wide">
+            <span className="text-sm font-semibold uppercase tracking-wide text-teal-900 sm:text-base">
               {item.label}
             </span>
-            <p className="text-base text-gray-600 mt-2 leading-relaxed">
+            <p className="mt-2 text-sm leading-relaxed text-gray-600 sm:text-base">
               {item.text}
             </p>
           </div>
