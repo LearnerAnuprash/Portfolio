@@ -75,7 +75,7 @@ export function ExperienceSection() {
           </p>
           <span className="h-1 w-1 rounded-full bg-slate-400" />
           <p className="text-sm font-medium text-slate-500">
-            Feb 2024 – Present
+            Feb 2026 – Present
           </p>
         </div>
 
