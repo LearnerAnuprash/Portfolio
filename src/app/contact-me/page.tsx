@@ -15,7 +15,6 @@ export const metadata: Metadata = createPageMetadata({
 });
 
 const EMAIL = "info.anuprash@gmail.com";
-const WHATSAPP_NUMBER = "+977 9745867377";
 const WHATSAPP_LINK = "https://wa.me/9779745867377";
 
 const CONTACT_OPTIONS = [
@@ -29,7 +28,7 @@ const CONTACT_OPTIONS = [
   },
   {
     label: "WhatsApp",
-    value: WHATSAPP_NUMBER,
+    value: "Chat with me now",
     href: WHATSAPP_LINK,
     icon: MessageCircle,
     description: "Best for quick conversations and direct follow-ups.",
@@ -116,11 +115,8 @@ export default function ContactMe() {
               Fastest response through WhatsApp.
             </h2>
             <p className="text-slate-300 leading-relaxed mb-6">
-              For direct conversations, tap the WhatsApp link to message me at{" "}
-              <span className="font-semibold text-white">
-                {WHATSAPP_NUMBER}
-              </span>
-              .
+              For direct conversations, tap the button below to open WhatsApp.
+              Your chat opens in a new tab — no number needed.
             </p>
             <a
               href={WHATSAPP_LINK}
