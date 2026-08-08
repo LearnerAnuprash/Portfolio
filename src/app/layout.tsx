@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import {
   SITE_DESCRIPTION,
   SITE_TITLE,
+  SITE_URL,
   metadataBase,
 } from "@/shared/constants/seo";
 import "./globals.css";
@@ -26,6 +27,21 @@ export const metadata: Metadata = {
   },
 };
 
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Anuprash Subedi",
+  jobTitle: "Frontend Developer",
+  url: SITE_URL,
+  email: "info.anuprash@gmail.com",
+  telephone: "+977-9745867377",
+  sameAs: [
+    "https://github.com/LearnerAnuprash",
+    "https://linkedin.com/in/Anuprash",
+    "https://x.com/Anuprash_subedi",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -46,6 +62,10 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col pt-5 font-display bg-gradient">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

@@ -1,0 +1,20 @@
+# Anuprash Subedi — Frontend Developer
+
+> Frontend developer portfolio of Anuprash Subedi, a frontend engineer working with Next.js, React, and TypeScript. Browse projects, experience, blog posts, and browser-based free tools. For project inquiries, collaborations, or proposals, reach out via email or WhatsApp.
+
+## Contact
+
+- Email: info.anuprash@gmail.com
+- WhatsApp: https://wa.me/9779745867377
+- GitHub: https://github.com/LearnerAnuprash
+- LinkedIn: https://linkedin.com/in/Anuprash
+- X (Twitter): https://x.com/Anuprash_subedi
+
+## Pages
+
+- [Work](https://anuprash.com.np/): Selected projects, experience, and tech stack.
+- [About](https://anuprash.com.np/about): Background, philosophy, and journey.
+- [Blog](https://anuprash.com.np/blog): Articles on frontend development, React, and TypeScript.
+  - [React Hooks Deep Dive](https://anuprash.com.np/blog/react-hooks-deep-dive): A deep dive into React hooks.
+- [Free Tools](https://anuprash.com.np/free-tools): Browser-based tools — Quick Notes and a whiteboard.
+- [Contact Me](https://anuprash.com.np/contact-me): How to get in touch for projects and collaborations.
